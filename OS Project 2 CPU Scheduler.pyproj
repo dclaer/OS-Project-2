@@ -1,0 +1,53 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>44beaaf1-670e-4a0a-acc0-caf0bfc61485</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>OS_Project_2_CPU_Scheduler.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>OS Project 2 CPU Scheduler</Name>
+    <RootNamespace>OS Project 2 CPU Scheduler</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="algorithms\fcfs.py" />
+    <Compile Include="algorithms\hrrn.py" />
+    <Compile Include="algorithms\mlfq.py" />
+    <Compile Include="algorithms\priority.py" />
+    <Compile Include="algorithms\rr.py" />
+    <Compile Include="algorithms\sjf.py" />
+    <Compile Include="algorithms\srtf.py" />
+    <Compile Include="main.py" />
+    <Compile Include="models\process.py" />
+    <Compile Include="OS_Project_2_CPU_Scheduler.py" />
+    <Compile Include="tests\tests_fcfs.py" />
+    <Compile Include="utils\metrics.py" />
+    <Compile Include="utils\process_generator.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="models\" />
+    <Folder Include="algorithms\" />
+    <Folder Include="tests\" />
+    <Folder Include="utils\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
